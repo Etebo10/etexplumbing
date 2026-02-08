@@ -1,4 +1,5 @@
 import { MapPin, Truck, Users, Award } from "lucide-react";
+import serviceAreaImage from "@/assets/service-area.jpg";
 
 const LocalTrust = () => {
   const features = [
@@ -25,19 +26,12 @@ const LocalTrust = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Map/Image Area */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-muted">
-              {/* Placeholder for map */}
-              <div className="w-full h-full bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <MapPin className="w-16 h-16 text-primary/30 mx-auto mb-4" />
-                  <p className="text-muted-foreground font-medium">
-                    Proudly Serving the Metro Area
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    30+ mile service radius from Downtown
-                  </p>
-                </div>
-              </div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-muted shadow-xl">
+              <img 
+                src={serviceAreaImage} 
+                alt="Professional plumbing service van in residential neighborhood" 
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Floating Card */}
