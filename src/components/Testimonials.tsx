@@ -1,4 +1,10 @@
 import { Star, Quote, MessageSquare } from "lucide-react";
+import testimonialSarah from "@/assets/testimonial-sarah.jpg";
+import testimonialMichael from "@/assets/testimonial-michael.jpg";
+import testimonialJennifer from "@/assets/testimonial-jennifer.jpg";
+import testimonialDavid from "@/assets/testimonial-david.jpg";
+import testimonialAmanda from "@/assets/testimonial-amanda.jpg";
+import testimonialRobert from "@/assets/testimonial-robert.jpg";
 
 const Testimonials = () => {
   const testimonials = [
@@ -7,7 +13,7 @@ const Testimonials = () => {
       location: "Downtown",
       rating: 5,
       text: "Our basement was flooding at 2 AM. ProFlow arrived within 30 minutes and had the issue fixed before sunrise. Absolute lifesavers! Their team was professional, courteous, and incredibly efficient.",
-      image: "SM",
+      image: testimonialSarah,
       verified: true,
     },
     {
@@ -15,7 +21,7 @@ const Testimonials = () => {
       location: "Westside",
       rating: 5,
       text: "I've used many plumbers over the years, but ProFlow is by far the best. They explained everything upfront, gave me a fair quote, and the work was flawless. Highly recommend!",
-      image: "MT",
+      image: testimonialMichael,
       verified: true,
     },
     {
@@ -23,7 +29,7 @@ const Testimonials = () => {
       location: "Suburbs",
       rating: 5,
       text: "From the initial call to job completion, everything was seamless. They installed our new water heater in record time. Fair pricing and excellent workmanship. 10/10 would recommend.",
-      image: "JR",
+      image: testimonialJennifer,
       verified: true,
     },
     {
@@ -31,7 +37,7 @@ const Testimonials = () => {
       location: "East End",
       rating: 5,
       text: "Finally, a plumber who shows up on time! The technician was knowledgeable, clean, and respectful of our home. Fixed a tricky leak that two other companies couldn't solve.",
-      image: "DC",
+      image: testimonialDavid,
       verified: true,
     },
     {
@@ -39,7 +45,7 @@ const Testimonials = () => {
       location: "North District",
       rating: 5,
       text: "We had a complete bathroom remodel done by ProFlow. The attention to detail was impressive. They stayed within budget and finished ahead of schedule. Couldn't be happier!",
-      image: "AP",
+      image: testimonialAmanda,
       verified: true,
     },
     {
@@ -47,7 +53,7 @@ const Testimonials = () => {
       location: "Midtown",
       rating: 5,
       text: "Emergency drain backup on a holiday weekend. ProFlow didn't charge extra for the holiday call. That's integrity. They've earned a customer for life.",
-      image: "RG",
+      image: testimonialRobert,
       verified: true,
     },
   ];
@@ -98,11 +104,12 @@ const Testimonials = () => {
                 "{testimonial.text}"
               </p>
 
-              {/* Author */}
               <div className="flex items-center gap-4 pt-5 border-t border-border/50">
-                <div className="w-14 h-14 rounded-full gradient-premium flex items-center justify-center text-white font-bold text-lg">
-                  {testimonial.image}
-                </div>
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.name}
+                  className="w-14 h-14 rounded-full object-cover ring-2 ring-accent/20"
+                />
                 <div className="flex-1">
                   <div className="font-display font-bold text-foreground flex items-center gap-2">
                     {testimonial.name}
