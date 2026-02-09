@@ -3,6 +3,12 @@ import Footer from "@/components/Footer";
 import StickyCallButton from "@/components/StickyCallButton";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import blogEmergency from "@/assets/blog-emergency.jpg";
+import blogFrozenPipes from "@/assets/blog-frozen-pipes.jpg";
+import blogWaterHeater from "@/assets/blog-water-heater.jpg";
+import blogDiy from "@/assets/blog-diy.jpg";
+import blogWaterPressure from "@/assets/blog-water-pressure.jpg";
+import blogDrain from "@/assets/blog-drain.jpg";
 
 const Blog = () => {
   const posts = [
@@ -13,6 +19,7 @@ const Blog = () => {
       date: "January 15, 2024",
       readTime: "5 min read",
       category: "Emergency Tips",
+      image: blogEmergency,
     },
     {
       title: "How to Prevent Frozen Pipes This Winter",
@@ -21,6 +28,7 @@ const Blog = () => {
       date: "January 10, 2024",
       readTime: "4 min read",
       category: "Maintenance",
+      image: blogFrozenPipes,
     },
     {
       title: "Tankless vs. Traditional Water Heaters: Which Is Right for You?",
@@ -29,6 +37,7 @@ const Blog = () => {
       date: "January 5, 2024",
       readTime: "6 min read",
       category: "Water Heaters",
+      image: blogWaterHeater,
     },
     {
       title: "DIY Plumbing Fixes vs. When to Call a Pro",
@@ -37,6 +46,7 @@ const Blog = () => {
       date: "December 28, 2023",
       readTime: "5 min read",
       category: "Tips & Advice",
+      image: blogDiy,
     },
     {
       title: "Understanding Your Home's Water Pressure",
@@ -45,6 +55,7 @@ const Blog = () => {
       date: "December 20, 2023",
       readTime: "4 min read",
       category: "Maintenance",
+      image: blogWaterPressure,
     },
     {
       title: "The Ultimate Guide to Drain Maintenance",
@@ -53,6 +64,7 @@ const Blog = () => {
       date: "December 15, 2023",
       readTime: "7 min read",
       category: "Drain Care",
+      image: blogDrain,
     },
   ];
 
@@ -82,8 +94,12 @@ const Blog = () => {
                   key={index}
                   className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group"
                 >
-                  <div className="aspect-video bg-muted flex items-center justify-center">
-                    <span className="text-muted-foreground">Blog Image</span>
+                  <div className="aspect-video overflow-hidden">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
                   <div className="p-6">
                     <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm rounded-full mb-3">
